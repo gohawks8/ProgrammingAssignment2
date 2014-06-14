@@ -1,8 +1,6 @@
-## Put comments here that give an overall description of what your
-## functions do
-
-## Write a short comment describing this function
-
+## this function will cache the given matrix if it is not already cached
+## and then return the cached matrix
+## if it is found, then directly return it 
 makeCacheMatrix <- function(x = matrix()) {
   m<-NULL
   set <- function(y)
@@ -18,7 +16,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## this function calls getmatrix (recursed) in makeCacheMatrix to check if the matrix has been processed before
+## if yes (return is the inversed matrix), return the result returned by getmatrix
+## if no, store the inversed matrix and return it
 
 cacheSolve <- function(x, ...) {
   # return a matrix that is the inverse of matrix 'x'
